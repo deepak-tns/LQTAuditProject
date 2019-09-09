@@ -1,0 +1,1782 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="mViewModel"
+            type="com.segal.lqtauditproject.ViewModels.AntennaViewModel" />
+
+        <variable
+            name="mViewEvents"
+            type="com.segal.lqtauditproject.ViewEvents.SiteDetailsEvents" />
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:context="com.segal.lqtauditproject.FragmentAntenna">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <CheckBox
+                    android:id="@+id/inputBand900"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="@={mViewModel.hasBand900}"
+                    android:text="900" />
+
+                <CheckBox
+                    android:id="@+id/inputBand1800"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="@={mViewModel.hasBand1800}"
+                    android:text="1800" />
+
+                <CheckBox
+                    android:id="@+id/inputBand2100"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="@={mViewModel.hasBand2100}"
+                    android:text="2100" />
+
+                <CheckBox
+                    android:id="@+id/inputBand2600"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="@={mViewModel.hasBand2600}"
+                    android:text="2600" />
+
+                <CheckBox
+                    android:id="@+id/inputBand3500"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="@={mViewModel.hasBand3500}"
+                    android:text="3500" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <TextView
+                android:id="@+id/tvBand900Technologies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/band900technologies_prompt" />
+
+            <Spinner
+                android:id="@+id/inputBand900Technologies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/band900technologies"
+                android:prompt="@string/band900technologies_prompt"
+                app:holder="@={mViewModel.technology900}" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <TextView
+                android:id="@+id/tvBand1800Technologies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/band1800technologies_prompt" />
+
+            <Spinner
+                android:id="@+id/inputBand1800Technologies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/band1800technologies"
+                android:prompt="@string/band1800technologies_prompt"
+                app:holder="@={mViewModel.technology1800}" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <TextView
+                android:id="@+id/tvBand2100Technologies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/band2100technologies_prompt" />
+
+            <Spinner
+                android:id="@+id/inputBand2100Technologies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/band2100technologies"
+                android:prompt="@string/band2100technologies_prompt"
+                app:holder="@={mViewModel.technology2100}" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <TextView
+                android:id="@+id/tvBand2600Technologies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/band2600technologies_prompt" />
+
+            <Spinner
+                android:id="@+id/inputBand2600Technologies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/band2600technologies"
+                android:prompt="@string/band2600technologies_prompt"
+                app:holder="@={mViewModel.technology2600}" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <TextView
+                android:id="@+id/tvBand3500Technologies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/band3500technologies_prompt" />
+
+            <Spinner
+                android:id="@+id/inputBand3500Technologies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/band3500technologies"
+                android:prompt="@string/band3500technologies_prompt"
+                app:holder="@={mViewModel.technology3500}" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <TextView
+                android:id="@+id/tvPlannedAntenna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Planned Antenna" />
+
+            <TextView
+                android:id="@+id/tvPlannedAntennaValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@{mViewModel.planAntennaName, default= "-" }' />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvOnSiteAntenna"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="OnSite Antenna" />
+
+                    <Spinner
+                        android:id="@+id/inputOnSiteAntenna"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/antenna_names"
+                        android:prompt="@string/antenna_names_prompt"
+                        app:holder="@={mViewModel.onSiteAntennaName}" />
+                </LinearLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgAntennaNameImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.onSiteAntennaNameImagePath}"
+                    android:tag="imgView,OnSiteAntennaName" />
+
+                <ImageButton
+                    android:id="@+id/btnAntennaNameImage"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,OnSiteAntennaName" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tvAntennaView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:paddingBottom="@dimen/image_tv_vertical_padding"
+                    android:paddingTop="@dimen/image_tv_vertical_padding"
+                    android:text="Antenna View" />
+
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgAntennaViewImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.antennaViewImagePath}"
+                    android:tag="imgView,AntennaView" />
+
+                <ImageButton
+                    android:id="@+id/btnAntennaViewImage"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,AntennaView" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tvDeviceOnAntenna"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:paddingBottom="@dimen/image_tv_vertical_padding"
+                    android:paddingTop="@dimen/image_tv_vertical_padding"
+                    android:text="Device on Antenna" />
+
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgDeviceOnAntennaImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.deviceOnAntennaImagePath}"
+                    android:tag="imgView,DeviceOnAntenna" />
+
+                <ImageButton
+                    android:id="@+id/btnDeviceOnAntennaImage"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,DeviceOnAntenna" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <TextView
+                android:id="@+id/tvPlannedETilt900"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Planned E Tilt (900)" />
+
+            <TextView
+                android:id="@+id/tvPlannedETilt900Value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={mViewModel.planETilt900}" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvOnSiteETilt900"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="OnSite E Tilt (900)" />
+
+                    <Spinner
+                        android:id="@+id/inputOnSiteETilt900"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/e_tilt_names"
+                        android:prompt="@string/e_tilt_prompt"
+                        app:holder="@={mViewModel.onSiteETilt900}" />
+                </LinearLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgOnSiteETilt900Image"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.onSiteETilt900ImagePath}"
+                    android:tag="imgView,OnSiteETilt900" />
+
+                <ImageButton
+                    android:id="@+id/btnOnSiteETilt900Image"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,OnSiteETilt900" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvChangedETilt900"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Changed E Tilt (900)" />
+
+                    <Spinner
+                        android:id="@+id/inputChangedETilt900"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/e_tilt_names"
+                        android:prompt="@string/e_tilt_prompt"
+                        app:holder="@={mViewModel.changeETilt900}" />
+                </LinearLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgChangedETilt900Image"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.changeETilt900ImagePath}"
+                    android:tag="imgView,ChangedETilt900" />
+
+                <ImageButton
+                    android:id="@+id/btnChangedETilt900Image"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,ChangedETilt900" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <TextView
+                android:id="@+id/tvPlannedETilt1800"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Planned E Tilt (1800)" />
+
+            <TextView
+                android:id="@+id/tvPlannedETilt1800Value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{mViewModel.planETilt1800}" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvOnSiteETilt1800"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="OnSite E Tilt (1800)" />
+
+                    <Spinner
+                        android:id="@+id/inputOnSiteETilt1800"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/e_tilt_names"
+                        android:prompt="@string/e_tilt_prompt"
+                        app:holder="@={mViewModel.onSiteETilt1800}" />
+                </LinearLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgOnSiteETilt1800Image"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.onSiteETilt1800ImagePath}"
+                    android:tag="imgView,OnSiteETilt1800" />
+
+                <ImageButton
+                    android:id="@+id/btnOnSiteETilt1800Image"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,OnSiteETilt1800" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvChangedETilt1800"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Changed E Tilt (1800)" />
+
+                    <Spinner
+                        android:id="@+id/inputChangedETilt1800"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/e_tilt_names"
+                        android:prompt="@string/e_tilt_prompt"
+                        app:holder="@={mViewModel.changeETilt1800}" />
+                </LinearLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgChangedETilt1800Image"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.changeETilt1800ImagePath}"
+                    android:tag="imgView,ChangedETilt1800" />
+
+                <ImageButton
+                    android:id="@+id/btnChangedETilt1800Image"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,ChangedETilt1800" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <TextView
+                android:id="@+id/tvPlannedETilt2100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Planned E Tilt (2100)" />
+
+            <TextView
+                android:id="@+id/tvPlannedETilt2100Value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{mViewModel.planETilt2100}" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvOnSiteETilt2100"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="OnSite E Tilt (2100)" />
+
+                    <Spinner
+                        android:id="@+id/inputOnSiteETilt2100"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/e_tilt_names"
+                        android:prompt="@string/e_tilt_prompt"
+                        app:holder="@={mViewModel.onSiteETilt2100}" />
+                </LinearLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgOnSiteETilt2100Image"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.onSiteETilt2100ImagePath}"
+                    android:tag="imgView,OnSiteETilt2100" />
+
+                <ImageButton
+                    android:id="@+id/btnOnSiteETilt2100Image"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,OnSiteETilt2100" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvChangedETilt2100"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Changed E Tilt (2100)" />
+
+                    <Spinner
+                        android:id="@+id/inputChangedETilt2100"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/e_tilt_names"
+                        android:prompt="@string/e_tilt_prompt"
+                        app:holder="@={mViewModel.changeETilt2100}" />
+                </LinearLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgChangedETilt2100Image"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.changeETilt2100ImagePath}"
+                    android:tag="imgView,ChangedETilt2100" />
+
+                <ImageButton
+                    android:id="@+id/btnChangedETilt2100Image"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,ChangedETilt2100" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <TextView
+                android:id="@+id/tvPlannedETilt2600"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Planned E Tilt (2600)" />
+
+            <TextView
+                android:id="@+id/tvPlannedETilt2600Value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={mViewModel.planETilt2600}" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvOnSiteETilt2600"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="OnSite E Tilt (2600)" />
+
+                    <Spinner
+                        android:id="@+id/inputOnSiteETilt2600"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/e_tilt_names"
+                        android:prompt="@string/e_tilt_prompt"
+                        app:holder="@={mViewModel.onSiteETilt2600}" />
+                </LinearLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgOnSiteETilt2600Image"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.onSiteETilt2600ImagePath}"
+                    android:tag="imgView,OnSiteETilt2600" />
+
+                <ImageButton
+                    android:id="@+id/btnOnSiteETilt2600Image"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,OnSiteETilt2600" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvChangedETilt2600"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Changed E Tilt (2600)" />
+
+                    <Spinner
+                        android:id="@+id/inputChangedETilt2600"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/e_tilt_names"
+                        android:prompt="@string/e_tilt_prompt"
+                        app:holder="@={mViewModel.changeETilt2600}" />
+                </LinearLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgChangedETilt2600Image"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.changeETilt2600ImagePath}"
+                    android:tag="imgView,ChangedETilt2600" />
+
+                <ImageButton
+                    android:id="@+id/btnChangedETilt2600Image"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,ChangedETilt2600" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <TextView
+                android:id="@+id/tvPlannedETilt3500"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Planned E Tilt (3500)" />
+
+            <TextView
+                android:id="@+id/tvPlannedETilt3500Value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{mViewModel.planETilt3500}" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvOnSiteETilt3500"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="OnSite E Tilt (3500)" />
+
+                    <Spinner
+                        android:id="@+id/inputOnSiteETilt3500"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/e_tilt_names"
+                        android:prompt="@string/e_tilt_prompt"
+                        app:holder="@={mViewModel.onSiteETilt3500}" />
+                </LinearLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgOnSiteETilt3500Image"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.onSiteETilt3500ImagePath}"
+                    android:tag="imgView,OnSiteETilt3500" />
+
+                <ImageButton
+                    android:id="@+id/btnOnSiteETilt3500Image"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,OnSiteETilt3500" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvChangedETilt3500"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Changed E Tilt (3500)" />
+
+                    <Spinner
+                        android:id="@+id/inputChangedETilt3500"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/e_tilt_names"
+                        android:prompt="@string/e_tilt_prompt"
+                        app:holder="@={mViewModel.changeETilt3500}" />
+                </LinearLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgChangedETilt3500Image"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.changeETilt3500ImagePath}"
+                    android:tag="imgView,ChangedETilt3500" />
+
+                <ImageButton
+                    android:id="@+id/btnChangedETilt3500Image"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,ChangedETilt3500" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <TextView
+                android:id="@+id/tvETiltMechanism"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/e_tilt_mechanism_prompt" />
+
+            <Spinner
+                android:id="@+id/inputETiltMechanism"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/e_tilt_mechanisms"
+                android:prompt="@string/e_tilt_mechanism_prompt"
+                app:holder="@={mViewModel.eTiltMechanism}" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <TextView
+                android:id="@+id/tvPlannedMTilt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Planned M Tilt" />
+
+            <TextView
+                android:id="@+id/tvPlannedMTiltValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{mViewModel.planMTilt}" />
+
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:id="@+id/text_input_layout_plan_m_tilt"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:hint="Plan M Tilt">-->
+
+                <!--<android.support.design.widget.TextInputEditText-->
+                    <!--android:id="@+id/inputPlanMTilt"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignBottom="@+id/section_label"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:ems="10"-->
+                    <!--android:inputType="none"-->
+                    <!--android:text="@={mViewModel.planMTilt}" />-->
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_onsite_m_tilt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:hint="OnSite M Tilt">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/inputOnSiteMTilt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/section_label"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:text="@={mViewModel.onSiteMTilt}" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgOnSiteMTiltImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.onSiteMTiltImagePath}"
+                    android:tag="imgView,OnSiteMTilt" />
+
+                <ImageButton
+                    android:id="@+id/btnOnSiteMTiltImage"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,OnSiteMTilt" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_change_m_tilt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:hint="Change M Tilt">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/inputChangeMTilt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/section_label"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:text="@={mViewModel.changeMTilt}" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgChangeMTiltImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.changeMTiltImagePath}"
+                    android:tag="imgView,ChangedMTilt" />
+
+                <ImageButton
+                    android:id="@+id/btnChangeMTiltImage"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,ChangedMTilt" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <TextView
+                android:id="@+id/tvPlannedHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Planned Height" />
+
+            <TextView
+                android:id="@+id/tvPlannedHeightValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{mViewModel.planHeight}" />
+
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:id="@+id/text_input_layout_plan_height"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:hint="Plan Height">-->
+
+                <!--<android.support.design.widget.TextInputEditText-->
+                    <!--android:id="@+id/inputPlanHeight"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignBottom="@+id/section_label"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:ems="10"-->
+                    <!--android:inputType="none"-->
+                    <!--android:text="@={mViewModel.planHeight}" />-->
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_onsite_height"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:hint="OnSite Height">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/inputOnSiteHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/section_label"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:text="@={mViewModel.onSiteHeight}" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgOnSiteHeightImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.onSiteHeightImagePath}"
+                    android:tag="imgView,OnSiteHeight" />
+
+                <ImageButton
+                    android:id="@+id/btnOnSiteHeightImage"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,OnSiteHeight" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_change_height"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:hint="Change Height">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/inputChangeHeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/section_label"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:text="@={mViewModel.changeHeight}" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgChangeHeightImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.changeHeightImagePath}"
+                    android:tag="imgView,ChangedHeight" />
+
+                <ImageButton
+                    android:id="@+id/btnChangeHeightImage"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,ChangedHeight" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <TextView
+                android:id="@+id/tvPlannedAzimuth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Planned Azimuth" />
+
+            <TextView
+                android:id="@+id/tvPlannedAzimuthValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="@{mViewModel.planAzimuth}" />
+
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:id="@+id/text_input_layout_plan_azimuth"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:hint="Plan Azimuth">-->
+
+                <!--<android.support.design.widget.TextInputEditText-->
+                    <!--android:id="@+id/inputPlanAzimuth"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignBottom="@+id/section_label"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:ems="10"-->
+                    <!--android:inputType="none"-->
+                    <!--android:text="@={mViewModel.planAzimuth}" />-->
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_onsite_azimuth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:hint="OnSite Azimuth">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/inputOnSiteAzimuth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/section_label"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:text="@={mViewModel.onSiteAzimuth}" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgOnSiteAzimuthImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.onSiteAzimuthImagePath}"
+                    android:tag="imgView,OnSiteAzimuth" />
+
+                <ImageButton
+                    android:id="@+id/btnOnSiteAzimuthImage"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,OnSiteAzimuth" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_change_azimuth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:hint="Change Azimuth">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/inputChangeAzimuth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/section_label"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:ems="10"
+                        android:inputType="numberDecimal"
+                        android:text="@={mViewModel.changeAzimuth}" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgChangeAzimuthImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.changeAzimuthImagePath}"
+                    android:tag="imgView,ChangedAzimuth" />
+
+                <ImageButton
+                    android:id="@+id/btnChangeAzimuthImage"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,ChangedAzimuth" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/form_space" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/inputRet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:checked="@={mViewModel.ret}"
+                    android:text="RET" />
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgRetImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.retImagePath}"
+                    android:tag="imgView,RET" />
+
+                <ImageButton
+                    android:id="@+id/btnRetImage"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,RET" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp" />
+
+            <CheckBox
+                android:id="@+id/inputIsSelfAwareAddon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="@={mViewModel.selfAwareAddon}"
+                android:text="S.A.Addon" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_rru1_sn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:paddingTop="4dp"
+                    android:hint="RRU 1 Sr.No.">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/inputRRU1SrNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/section_label"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:text="@={mViewModel.rru1SerialNumber}" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgRRU1SrNoImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.rru1SerialNumberImagePath}"
+                    android:tag="imgView,RRU_1_SerialNumber" />
+
+                <ImageButton
+                    android:id="@+id/btnRRU1SrNoImage"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,RRU_1_SerialNumber" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/tvRRU1Band"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RRU 1 Band" />
+
+            <Spinner
+                android:id="@+id/inputRRU1Band"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/bands"
+                android:prompt="@string/bands_prompt"
+                app:holder="@={mViewModel.rru1Band}" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/tvRRU1Technologies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RRU 1 Technologies" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <CheckBox
+                    android:id="@+id/inputRRU1Technology2G"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="@={mViewModel.rru1Technology2g}"
+                    android:text="2G" />
+
+                <CheckBox
+                    android:id="@+id/inputRRU1Technology3G"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="@={mViewModel.rru1Technology3g}"
+                    android:text="3G" />
+
+                <CheckBox
+                    android:id="@+id/inputRRU1Technology4G"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="@={mViewModel.rru1Technology4g}"
+                    android:text="4G" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_rru2_sn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:hint="RRU 2 Sr.No.">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/inputRRU2SrNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/section_label"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:text="@={mViewModel.rru2SerialNumber}" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgRRU2SrNoImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.rru2SerialNumberImagePath}"
+                    android:tag="imgView,RRU_2_SerialNumber" />
+
+                <ImageButton
+                    android:id="@+id/btnRRU2SrNoImage"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,RRU_2_SerialNumber" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/tvRRU2Band"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RRU 2 Band" />
+
+            <Spinner
+                android:id="@+id/inputRRU2Band"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/bands"
+                android:prompt="@string/bands_prompt"
+                app:holder="@={mViewModel.rru2Band}" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/tvRRU2Technologies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RRU 2 Technologies" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <CheckBox
+                    android:id="@+id/inputRRU2Technology2G"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="@={mViewModel.rru2Technology2g}"
+                    android:text="2G" />
+
+                <CheckBox
+                    android:id="@+id/inputRRU2Technology3G"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="@={mViewModel.rru2Technology3g}"
+                    android:text="3G" />
+
+                <CheckBox
+                    android:id="@+id/inputRRU2Technology4G"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="@={mViewModel.rru2Technology4g}"
+                    android:text="4G" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_rru3_sn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:hint="RRU 3 Sr.No.">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/inputRRU3SrNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/section_label"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:text="@={mViewModel.rru3SerialNumber}" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgRRU3SrNoImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.rru3SerialNumberImagePath}"
+                    android:tag="imgView,RRU_3_SerialNumber" />
+
+                <ImageButton
+                    android:id="@+id/btnRRU3SrNoImage"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,RRU_3_SerialNumber" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/tvRRU3Band"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RRU 3 Band" />
+
+            <Spinner
+                android:id="@+id/inputRRU3Band"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/bands"
+                android:prompt="@string/bands_prompt"
+                app:holder="@={mViewModel.rru3Band}" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/tvRRU3Technologies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RRU 3 Technologies" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <CheckBox
+                    android:id="@+id/inputRRU3Technology2G"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="@={mViewModel.rru3Technology2g}"
+                    android:text="2G" />
+
+                <CheckBox
+                    android:id="@+id/inputRRU3Technology3G"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="@={mViewModel.rru3Technology3g}"
+                    android:text="3G" />
+
+                <CheckBox
+                    android:id="@+id/inputRRU3Technology4G"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="@={mViewModel.rru3Technology4g}"
+                    android:text="4G" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_layout_rru4_sn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:hint="RRU 4 Sr.No.">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/inputRRU4SrNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/section_label"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:text="@={mViewModel.rru4SerialNumber}" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.segal.lqtauditproject.CustomViews.HaImageView
+                    android:id="@+id/imgRRU4SrNoImage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    app:image="@={mViewModel.rru4SerialNumberImagePath}"
+                    android:tag="imgView,RRU_4_SerialNumber" />
+
+                <ImageButton
+                    android:id="@+id/btnRRU4SrNoImage"
+                    android:layout_width="@dimen/camera_btn_size"
+                    android:layout_height="@dimen/camera_btn_size"
+                    style="@style/AppTheme.CameraBtn"
+                    android:tag="camBtn,RRU_4_SerialNumber" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/tvRRU4Band"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RRU 4 Band" />
+
+            <Spinner
+                android:id="@+id/inputRRU4Band"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/bands"
+                android:prompt="@string/bands_prompt"
+                app:holder="@={mViewModel.rru4Band}" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="6dp" />
+
+            <TextView
+                android:id="@+id/tvRRU4Technologies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RRU 4 Technologies" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <CheckBox
+                    android:id="@+id/inputRRU4Technology2G"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="@={mViewModel.rru4Technology2g}"
+                    android:text="2G" />
+
+                <CheckBox
+                    android:id="@+id/inputRRU4Technology3G"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="@={mViewModel.rru4Technology3g}"
+                    android:text="3G" />
+
+                <CheckBox
+                    android:id="@+id/inputRRU4Technology4G"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="@={mViewModel.rru4Technology4g}"
+                    android:text="4G" />
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</layout>

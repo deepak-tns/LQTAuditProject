@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sector_container"
+    tools:context="com.segal.lqtauditproject.SectorFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGray"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/sectorAntennaSelector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/antennas"
+            android:gravity="center"
+            android:prompt="@string/antennas_prompt" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/antenna_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

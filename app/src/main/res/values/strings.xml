@@ -1,0 +1,168 @@
+<resources>
+    <string name="app_name">LQTAudit</string>
+    <string name="tab_text_1">SITES</string>
+    <string name="tab_text_2">MAP</string>
+    <string name="tab_site_info_text">SITE INFO</string>
+    <string name="tab_site_sectors_text">SECTORS</string>
+    <string name="tab_site_panorama_text">PANORAMA</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_log_off">Log Off</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_site_details">Site Details</string>
+    <string name="tab_text_3">Tab 3</string>
+
+    <string name="vendors_prompt">Vendor</string>
+    <string name="site_types_prompt">Site Type</string>
+    <string name="towers_prompt">Tower</string>
+
+    <string name="bands_prompt">Band</string>
+    <string-array name="bands">
+        <item>-</item>
+        <item>900</item>
+        <item>1800</item>
+        <item>2100</item>
+        <item>2600</item>
+        <item>3500</item>
+    </string-array>
+
+    <string-array name="vendors">
+        <item>-</item>
+        <item>Huawei</item>
+        <item>Ericsson</item>
+        <item>ZTE</item>
+        <item>NSN</item>
+        <item>ALU</item>
+    </string-array>
+
+    <string-array name="site_types">
+        <item>-</item>
+        <item>Roof Top</item>
+        <item>Stand Alone</item>
+        <item>Green Field</item>
+    </string-array>
+
+    <string-array name="towers">
+        <item>-</item>
+        <item>Lattice</item>
+        <item>Monopole</item>
+        <item>Guyed Mast</item>
+        <item>RT Pole</item>
+        <item>Disguised</item>
+        <item>Self Support Tower</item>
+    </string-array>
+
+    <string name="antennas_prompt">Antenna</string>
+    <string-array name="antennas">
+        <item>Antenna 1</item>
+        <item>Antenna 2</item>
+        <item>Antenna 3</item>
+        <item>Antenna 4</item>
+    </string-array>
+
+    <string name="band900technologies_prompt">Technologies (900)</string>
+    <string-array name="band900technologies">
+        <item>None</item>
+        <item>2G</item>
+        <item>2G, 3G</item>
+    </string-array>
+
+    <string name="band1800technologies_prompt">Technologies (1800)</string>
+    <string-array name="band1800technologies">
+        <item>None</item>
+        <item>2G</item>
+        <item>LTE</item>
+        <item>2G, LTE</item>
+    </string-array>
+
+    <string name="band2100technologies_prompt">Technologies (2100)</string>
+    <string-array name="band2100technologies">
+        <item>None</item>
+        <item>3G</item>
+    </string-array>
+
+    <string name="band2600technologies_prompt">Technologies (2600)</string>
+    <string-array name="band2600technologies">
+        <item>None</item>
+        <item>LTE</item>
+    </string-array>
+
+    <string name="band3500technologies_prompt">Technologies (3500)</string>
+    <string-array name="band3500technologies">
+        <item>None</item>
+        <item>LTE</item>
+    </string-array>
+
+    <string name="antenna_names_prompt">Antenna Name</string>
+    <string-array name="antenna_names">
+        <item>-</item>
+        <item>Huawei ATR4518R7 3XPole</item>
+        <item>Huawei AQU4518R9 4XPole</item>
+        <item>Kathrein 742272v03 3XPole</item>
+        <item>Kathrein 80010833 3XPole</item>
+        <item>Powerwave 5782.00 3XPole</item>
+        <item>Powerwave 7785.00 3XPole</item>
+        <item>Powerwave P65-18-XDHH-M 3XPole</item>
+        <item>Powerwave P65-18-XDHH-R 3XPole</item>
+        <item>Powerwave P65-18-XDHHW2-M 4XPole</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="e_tilt_prompt">E Tilt</string>
+    <string-array name="e_tilt_names">
+        <item>-</item>
+        <item>RET</item>
+        <item>0</item>
+        <item>0.5</item>
+        <item>1</item>
+        <item>1.5</item>
+        <item>2</item>
+        <item>2.5</item>
+        <item>3</item>
+        <item>3.5</item>
+        <item>4</item>
+        <item>4.5</item>
+        <item>5</item>
+        <item>5.5</item>
+        <item>6</item>
+        <item>6.5</item>
+        <item>7</item>
+        <item>7.5</item>
+        <item>8</item>
+        <item>8.5</item>
+        <item>9</item>
+        <item>9.5</item>
+        <item>10</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="e_tilt_mechanism_prompt">E Tilt Mechanism</string>
+    <string-array name="e_tilt_mechanisms">
+        <item>-</item>
+        <item>Manual</item>
+        <item>External</item>
+        <item>Embedded</item>
+    </string-array>
+
+    <string name="title_activity_image_viewer">Review Image</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="save">Save</string>
+    <string name="upload">Upload</string>
+    <string name="cancel">Cancel</string>
+    <string name="zip">Zip</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_incorrect_email">This email is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sectors_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context="com.segal.lqtauditproject.SectorsTabFragment">
+
+    <!--<android.support.design.widget.AppBarLayout-->
+    <!--android:id="@+id/appbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:paddingTop="@dimen/appbar_padding_top"-->
+    <!--android:theme="@style/AppTheme.AppBarOverlay">-->
+
+    <!--<android.support.design.widget.TabLayout-->
+    <!--android:id="@+id/sectors_tabs"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/colorPrimary" />-->
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/sectors_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            app:tabIndicatorColor="@color/colorGray"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextColor="@color/colorGray">
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabItem7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SECTOR A" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabItem6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SECTOR B" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabItem5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SECTOR C" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabItem4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SECTOR D" />
+        </android.support.design.widget.TabLayout>
+
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/site_sectors_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
